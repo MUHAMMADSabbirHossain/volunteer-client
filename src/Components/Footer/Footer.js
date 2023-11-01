@@ -5,6 +5,8 @@ const Footer = () => {
     return (
         <div>
             <h1>Footer</h1>
+            <footer><p><small>Copyright &copy; {(new Date().getFullYear())} Volunteer Network. All rights reserved.</small></p></footer>
+
         </div>
     );
 };
