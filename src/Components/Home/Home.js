@@ -22,8 +22,8 @@ const Home = () => {
                 {
                     events.map(event =>
                         <div key={event._id}>ad
-                            <img src={event.eventImgLink} alt="" srcset="" />
-                            <p>{event.name}</p>
+                            <img src={event.bannerLink} alt="" srcset="" />
+                            <p>{event.title}</p>
                         </div>
                     )
                 }
