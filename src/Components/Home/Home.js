@@ -1,7 +1,11 @@
 import React from 'react';
 import "./Home.css";
+import useEvents from '../../Hooks/useEvents';
 
 const Home = () => {
+
+    const [events, setEvents] = useEvents();
+
     return (
         <div>
             <h1>Home</h1>
@@ -13,9 +17,18 @@ const Home = () => {
                     <button type="submit">Search</button>
                 </form>
 
-                <div>
+                <h2>Search Results ({events.length})</h2>
 
-                </div>
+                {
+                    events.map(event =>
+                        <div key={event._id}>ad
+                            <img src={event.eventImgLink} alt="" srcset="" />
+                            <p>{event.name}</p>
+                        </div>
+                    )
+                }
+
+
 
             </main>
         </div>
