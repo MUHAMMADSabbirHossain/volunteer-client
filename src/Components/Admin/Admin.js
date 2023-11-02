@@ -19,10 +19,8 @@ const Admin = () => {
                 </section>
 
                 <section>
-
-                    <VolunteersRegList></VolunteersRegList>
                     <AddEvent></AddEvent>
-
+                    <VolunteersRegList></VolunteersRegList>
                 </section>
             </main>
 
