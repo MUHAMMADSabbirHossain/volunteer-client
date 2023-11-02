@@ -12,7 +12,7 @@ const Admin = () => {
             <main className="grid lg:grid-cols-6 ">
                 <section className="">
 
-                    <img className="mx-auto px-4 my-2" src={logo} alt="" sizes="" srcset="" />
+                    <img className="mx-auto px-4 my-2" src={logo} alt="" sizes="" srcset="" width="250px" />
 
                     <Link className="font-semibold my-2 inline-block" to="/admin/volunteers-register-list">Volunteer registers list</Link>
                     <Link className="font-semibold my-2 inline-block" to="/admin/add-event"><span className="text-xl font-bold">+</span>Add event</Link>
