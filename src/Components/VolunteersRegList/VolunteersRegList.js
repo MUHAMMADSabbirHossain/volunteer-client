@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import "./VolunteersRegList.css";
+import useVolunteersRegList from '../../Hooks/useVolunteersRegList';
 
 const VolunteersRegList = () => {
 
-    const [volunteersRegList, setVolunteersRegList] = useState([]);
-    useEffect(() => {
-        const url = `http://localhost:5000/volunteers-detail`;
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setVolunteersRegList(data));
-    }, []);
+    const [volunteersRegList, setVolunteersRegList] = useVolunteersRegList();
 
 
     return (
