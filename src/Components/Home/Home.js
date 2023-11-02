@@ -10,10 +10,10 @@ const Home = () => {
         <div>
             <h1>Home</h1>
             <main>
-                <h1 className="text-2xl font-semibold my-6 sm:text-4xl md:text-5xl">I grow by helping people in need.</h1>
+                <h1 className="uppercase text-2xl font-semibold my-6 sm:text-4xl md:text-5xl">I grow by helping people in need.</h1>
 
                 <form action="">
-                    <input class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-6 sm:w-80" type="text" name="searchEvents" id="" placeholder="Serach events... " />
+                    <input className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-6 sm:w-80" type="text" name="searchEvents" id="" placeholder="Serach events... " />
 
                     <button className="text-white font-bold py-2 px-4 rounded bg-blue-500 hover:bg-blue-700 " type="submit">Search</button>
                 </form>
