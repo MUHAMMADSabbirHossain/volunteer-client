@@ -9,16 +9,16 @@ const Admin = () => {
         <div>
             <h1>Admin</h1>
 
-            <main>
-                <section>
+            <main className="grid lg:grid-cols-6 ">
+                <section className="">
 
-                    <img src={logo} alt="" sizes="" srcset="" />
+                    <img className="mx-auto px-4 my-2" src={logo} alt="" sizes="" srcset="" />
 
-                    <Link to="/admin/volunteers-register-list">Volunteer registers list</Link>
-                    <Link to="/admin/add-event">+ Add event</Link>
+                    <Link className="font-semibold my-2 inline-block" to="/admin/volunteers-register-list">Volunteer registers list</Link>
+                    <Link className="font-semibold my-2 inline-block" to="/admin/add-event"><span className="text-xl font-bold">+</span>Add event</Link>
                 </section>
 
-                <section>
+                <section className="lg:col-span-5">
                     <AddEvent></AddEvent>
                     <VolunteersRegList></VolunteersRegList>
                 </section>
