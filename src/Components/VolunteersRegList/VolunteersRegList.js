@@ -54,7 +54,6 @@ const VolunteersRegList = () => {
                                 }
                             </tbody>
                         </table>
-
                     </div>
 
                 </section>

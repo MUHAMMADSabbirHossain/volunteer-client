@@ -7,12 +7,14 @@ const NavBar = () => {
     return (
         <div>
             <h1>NavBar</h1>
-            <nav>
-                <Link to="">
-                    <img src={logo} alt="Volunteer logo" srcset="" />
-                </Link>
-
+            <nav className="sm:flex justify-between px-10">
                 <div>
+                    <Link to="/">
+                        <img src={logo} alt="Volunteer logo" srcset="" width="20%" />
+                    </Link>
+                </div>
+
+                <div className="">
                     <Link to="/">Home</Link>
                     <Link to="/donation">Donation</Link>
                     <Link to="/events">Events</Link>
