@@ -14,6 +14,7 @@ import RegAsVolunteer from './Components/RegAsVolunteer/RegAsVolunteer';
 import UserProfile from './Components/UserProfile/UserProfile';
 import VolunteersRegList from './Components/VolunteersRegList/VolunteersRegList';
 import AddEvent from './Components/AddEvent/AddEvent';
+import Admin from './Components/Admin/Admin';
 
 function App() {
   return (
@@ -49,14 +50,18 @@ function App() {
         <Route path="/donation" element={<Donation></Donation>}></Route>
 
         <Route path="/events" element={<Events></Events>}></Route>
-        <Route path="add-event" element={<AddEvent></AddEvent>}></Route>
+
 
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
 
         <Route path="/signin" element={<Signin></Signin>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path="user-profile" element={<UserProfile></UserProfile>}></Route>
-        <Route path="Volunteers-register-list" element={<VolunteersRegList></VolunteersRegList>}></Route>
+
+
+        <Route path="/admin" element={<Admin></Admin>}></Route>
+        {/* <Route path="/admin/volunteers-register-list" element={<VolunteersRegList></VolunteersRegList>}></Route>
+        <Route path="/admin/add-event" element={<AddEvent></AddEvent>}></Route> */}
 
         {/* not found page */}
         <Route path="*" element={<Page404></Page404>}></Route>

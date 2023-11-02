@@ -1,7 +1,9 @@
 import React from 'react';
 import "./VolunteersRegList.css";
 
-const volunteersRegList = () => {
+const VolunteersRegList = () => {
+
+
     return (
         <div>
             <h1>volunteersRegList</h1>
@@ -21,4 +23,4 @@ const volunteersRegList = () => {
     );
 };
 
-export default volunteersRegList;
+export default VolunteersRegList;
