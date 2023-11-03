@@ -8,10 +8,10 @@ const Events = () => {
             <main>
 
                 <h1>Event Tasks</h1>
-                <div>
+                <div className="font-semibold">
                     <div><img src="" alt="Event logo" sizes="" srcset="" /></div>
                     <div>
-                        <h2>Humanity More</h2>
+                        <h2 className="text-gray-500 ">Humanity More</h2>
                         <p>29 sep, 2020</p>
                         <button type="submit">Cancel</button>
                     </div>
