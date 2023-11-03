@@ -1,10 +1,15 @@
 import React from 'react';
 import "./Home.css";
 import useEvents from '../../Hooks/useEvents';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
     const [events, setEvents] = useEvents();
+
+    const handleRegEvent = event => {
+        // console.log(event);
+    };
 
     return (
         <div>
@@ -23,9 +28,14 @@ const Home = () => {
                 <section className="flex flex-wrap justify-middle">
                     {
                         events.map(event =>
-                            <div className="mx-auto my-6 inline " key={event._id}>
-                                <img src={event.bannerLink} alt="" srcset="" width="300px" />
-                                <p className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 rounded items-center">{event.title}</p>
+                            <div onClick={() => handleRegEvent(event._id)} className="mx-auto my-6 inline " key={event._id}>
+
+                                <Link to={`/register-as-volunteer/${event._id}`}>
+
+                                    <img src={event.bannerLink} alt="" srcset="" width="300px" />
+
+                                    <p className="bg-gray-200 hover:bg-gray-300 text-gray-600 font-bold py-3 rounded items-center">{event.title}</p>
+                                </Link>
                             </div>
                         )
                     }

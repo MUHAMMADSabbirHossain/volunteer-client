@@ -45,7 +45,7 @@ function App() {
 
         {/* landing page */}
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="register-as-volunteer" element={<RegAsVolunteer></RegAsVolunteer>}></Route>
+        <Route path="/register-as-volunteer/:eventId" element={<RegAsVolunteer></RegAsVolunteer>}></Route>
 
         <Route path="/donation" element={<Donation></Donation>}></Route>
 
