@@ -3,11 +3,15 @@ import "./RegAsVolunteer";
 import logo from "../../Resources/logos/Group 1329.png";
 import { useParams } from 'react-router-dom';
 import useSelectedEvent from '../../Hooks/useSelectedEvent';
+import auth from '../../firebase.init';
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const RegAsVolunteer = () => {
 
     const { eventId } = useParams();
     const [selectedEvent, setSelectedEvent] = useSelectedEvent(eventId);
+    const user = useAuthState(auth);
+    console.log(user[0].displayName);
 
 
     // register as a volunteer
@@ -51,16 +55,16 @@ const RegAsVolunteer = () => {
 
                     <form onSubmit={handleVolunteerForm} action="">
                         <label className="block text-gray-500 font-bold text-left mb-1 md:mb-0 pr-4" for="grid-first-name" htmlFor="fullName">Full Name: </label>
-                        <input className=" appearance-none block w-80 bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" name="fullName" id="" />
+                        <input className=" appearance-none block w-80 bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white font-bold" type="text" name="fullName" id="" value={user[0].displayName} />
 
                         <label className="block text-gray-500 font-bold text-left mb-1 md:mb-0 pr-4" for="grid-first-name" htmlFor="email">Username or Email: </label>
-                        <input className="appearance-none block w-80 bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" name="email" id="" />
+                        <input className="appearance-none block w-80 bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white font-bold" type="text" name="email" id="" />
 
                         <label className="block text-gray-500 font-bold text-left mb-1 md:mb-0 pr-4" for="grid-first-name" htmlFor="dateTime">Date and Time: </label>
                         <input className="appearance-none block w-80 bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white font-bold" type="datetime-local" name="dateTime" id="" value={selectedEvent.date} disabled />
 
                         <label className="block text-gray-500 font-bold text-left mb-1 md:mb-0 pr-4" for="grid-first-name" htmlFor="description">Description: </label>
-                        <textarea className="appearance-none block w-80 bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" name="description" id="" cols="30" rows="5"></textarea>
+                        <textarea className="appearance-none block w-80 bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white font-bold" name="description" id="" cols="30" rows="5" placeholder="Enter your designation..."></textarea>
 
                         <label className="block text-gray-500 font-bold text-left mb-1 md:mb-0 pr-4" for="grid-first-name" htmlFor="eventTitle">Event Title: </label>
                         <input className="appearance-none block w-80 bg-gray-200 text-gray-700 border border-blue-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white font-bold" type="text" name="eventTitle" id="" value={selectedEvent.title} disabled />
