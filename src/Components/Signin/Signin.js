@@ -4,7 +4,8 @@ import logo from "../../Resources/logos/Group 1329.png";
 import { Link, useNavigate } from 'react-router-dom';
 import { useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from "../../firebase.init";
-
+import googleLogo from "../../Resources/social/Google__G__Logo.svg.png";
+import facebookLogo from "../../Resources/social/facebook.png";
 
 const Signin = () => {
 
@@ -40,26 +41,29 @@ const Signin = () => {
         <div>
             <h1>Signin</h1>
             <main>
-                <img src={logo} alt="Volunteer logo" sizes="" srcset="" />
+                <img className="mx-auto my-4 " src={logo} alt="Volunteer logo" sizes="" srcset="" width="25%" />
 
-                <div>
-                    <h1>Login with</h1>
-                    <button onClick={() => signInWithGoogle()} type="submit">
-                        <img src="" alt="Google signin logo" sizes="" srcset="" />
-                        <p>Continue with Google</p>
+                <div className="inline-block p-4 border ">
+                    <h1 className="my-8 text-2xl font-semibold">Login with</h1>
+
+                    <button className="w-full px-4 py-1 border rounded flex items-center " onClick={() => signInWithGoogle()} type="submit">
+                        <img src={googleLogo} alt="Google signin logo" sizes="" srcset="" width="40px" />
+                        <span className="px-10 text-gray-500 font-semibold">Continue with Google</span>
                     </button>
 
-                    <button onClick={() => signInWithFacebook()} type="submit">
-                        <img src="" alt="Facebook signin logo" sizes="" srcset="" />
-                        <p>Continue with Facebook</p>
+                    <br />
+
+                    <button className="w-full px-4 py-1 border rounded flex items-center " onClick={() => signInWithFacebook()} type="submit">
+                        <img src={facebookLogo} alt="Facebook signin logo" sizes="" srcset="" width="40px" />
+                        <span className="px-10 text-gray-500 font-semibold">Continue with Facebook</span>
                     </button>
 
-                    <div>
-                        <p>Don't have an account? <span><Link to="/signup">Create an account free</Link></span>.</p>
+                    <div className="py-2">
+                        <p className="text-gray-500 font-semibold">Don't have an account? <span className="text-blue-600 font-semibold"><Link to="/signup">Create an account free</Link></span>.</p>
                     </div>
-                </div>
-            </main>
-        </div>
+                </div >
+            </main >
+        </div >
     );
 };
 
