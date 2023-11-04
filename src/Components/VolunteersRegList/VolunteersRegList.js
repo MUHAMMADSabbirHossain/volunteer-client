@@ -6,7 +6,7 @@ import trash from "../../Resources/logos/trash-2 9.png";
 const VolunteersRegList = () => {
 
     const [volunteersRegList, setVolunteersRegList] = useVolunteersRegList();
-
+    // console.log(volunteersRegList);
 
     return (
         <div>
